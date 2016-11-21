@@ -1,10 +1,24 @@
 <?php
-	$server = "localhost";
-	$usuario = "root";
-	$password = "";
-	$db = "registro_escuelab";
-	$link = mysql_connect($server, $usuario, $password);
-	mysql_select_db($db, $link) OR DIE (
-		"Error: no es posible establecer la conexion con la DB :("
-	);
+	class conexion{
+		private $servidor;
+		private $usuario;
+		private $password;
+		private $basedatos;
+		public  $conexion;
+
+		public function __construct(){
+			$this->servidor  = "localhost";
+			$this->usuario   = "root";
+			$this->password  = "";
+			$this->basedatos = "escuelabform";
+		}
+
+		function conectar(){
+			$this->conexion = new mysqli($this->servidor, $this->usuario, $this->password, $this->basedatos);
+		}
+
+		function cerrar(){
+			$this->conexion->close();
+		}
+	}
 ?>
