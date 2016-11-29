@@ -3,7 +3,7 @@ $(document).ready(function() {
 
 	$("#register-form").validate({
 		rules: {
-			dni: {
+			pid: {
 				required: true,
 				minlength: 8,
 				maxlength: 8,
