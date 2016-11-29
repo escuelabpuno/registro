@@ -14,25 +14,25 @@ $(document).ready(function(){
 
 
 	});
-	$("#enviar").click(function() {
+	$("#register").click(function() {
 		//Obtenemos el valor del campo nombre
 		var dni  = $("#dni").val();
-		var nom_ap = $("#nom_ap").val();
-		var edad = $("#edad").val();
-		var celular = $("#celular").val();
-		var institucion = $("#institucion").val();
+		var nom_ap = $("#name_lastname").val();
+		var edad = $("#age").val();
+		var celular = $("#cellphone").val();
+		var institucion = $("#institution").val();
 		var email = $("#email").val();
-		var hora_ingreso = $("#hora_ingreso").val();
-		var motivo = $("#motivo").val();
+		var hora_ingreso = $("#check_in").val();
+		var motivo = $("#reason").val();
 
 		var dataString = {'dni' : dni,
-						 'nom_ap' : nom_ap,
-						 'edad' : edad,
-						 'celular' : celular,
-						 'institucion' : institucion,
+						 'name_lastname' : nom_ap,
+						 'age' : edad,
+						 'cellphone' : celular,
+						 'institution' : institucion,
 						 'email' : email,
-						 'hora_ingreso' : hora_ingreso,
-						 'motivo' : motivo};
+						 'check_in' : hora_ingreso,
+						 'reason' : motivo};
 		$.ajax({
 			type: "POST",
 			url: "/person",
