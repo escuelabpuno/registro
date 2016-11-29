@@ -1,5 +1,5 @@
 $(document).ready(function(){
-		
+
 	$('#dni').blur(function(){
 		var dni  = $("#dni").val();
 		var dataString = 'dni='+dni;
@@ -25,12 +25,15 @@ $(document).ready(function(){
 		var hora_ingreso = $("#hora_ingreso").val();
 		var motivo = $("#motivo").val();
 
+
+		debugger
+
 		var dataString = {'dni' : dni,
 						 'nom_ap' : nom_ap,
 						 'edad' : edad,
 						 'celular' : celular,
 						 'institucion' : institucion,
-						 'email' : email, 
+						 'email' : email,
 						 'hora_ingreso' : hora_ingreso,
 						 'motivo' : motivo};
 		$.ajax({
@@ -46,7 +49,7 @@ $(document).ready(function(){
 		});
 		return false;
 	});
-		
+
 
 });
 
@@ -79,7 +82,7 @@ $(document).ready(function(){
 						 'edad' : edad,
 						 'celular' : celular,
 						 'institucion' : institucion,
-						 'email' : email, 
+						 'email' : email,
 						 'hora_ingreso' : hora_ingreso,
 						 'motivo' : motivo};
             $.ajax({
