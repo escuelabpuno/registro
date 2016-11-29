@@ -9,7 +9,7 @@ services:
       - $PWD:/escuelab
     links:
       - db:db
-    working_dir: /escuelab
+    working_dir: /escuelab/app
 
   db:
     image: mongo

@@ -35,7 +35,7 @@ $(document).ready(function(){
 						 'motivo' : motivo};
 		$.ajax({
 			type: "POST",
-			url: "/api/v1/person",
+			url: "/person",
 			data : dataString,
 			success: function() {
 		    	$('#register_form').html("<div id='message'></div>");
