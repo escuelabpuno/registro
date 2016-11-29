@@ -1,14 +1,6 @@
 <!-- Default home page -->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600' rel='stylesheet' type='text/css'>
-<style>
-  /* Styles included inline since you'll probably be deleting this page anyway */
-  html,body{text-align:left;font-size:1em}html,body,img,form,textarea,input,fieldset,div,p,div,ul,li,ol,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,code{margin:0;padding:0}ul,li{list-style:none}img{display:block}a img{border:0}a{text-decoration:none;font-weight:normal;font-family:inherit}*:active,*:focus{outline:0;-moz-outline-style:none}h1,h2,h3,h4,h5,h6{font-weight:normal}div.clear{clear:both}.clearfix:after{clear:both;content:".";display:block;font-size:0;height:0;line-height:0;visibility:hidden}body{font-family:"Open Sans",Arial,sans-serif;font-weight:300;}.top-bar {width: 100%; background-color: #e4f0f1; padding: 15px 0;}.top-bar .container img {float: left;}.top-bar .container ul {float: right; padding-top: 25px;}.top-bar .container li {float: left; width: 125px; text-align: center; font-size: 15px; color:#000; font-weight: 600;}.top-bar .container a li:hover {color: #118798; -webkit-transition:color 200ms; -moz-transition:color 200ms; -o-transition:color 200ms;transition:color 200ms;}.container{width: 80%; max-width: 1200px; margin: auto;}div.header {-webkit-transition: 6s; -moz-transition: 6s; -o-transition: 6s;transition: 6s; background: rgba(4, 36, 41, 0.89) url(http://sailsjs.org/images/img_sailsShadow.png) no-repeat 42% bottom; padding: 100px 0 65px;}.header h1#main-title{color: #fff; font-weight: 300; font-size: 2.5em;}.header h3{color: #b1eef7; font-style: italic; font-weight: 300;}.header h3 code{font-style: normal!important; background-color: rgba(255,255,255,0.5); font-weight: 300; color:#0e6471; margin: 0px 5px;}div.main.container{padding: 50px 0;}h1 {color: #118798; font-weight: 300;}code {font-size: inherit; font-family: 'Consolas', 'Monaco', monospace; padding:4px 5px 1px; background-color: #f3f5f7}a{color: #118798; font-weight: 300; text-decoration: underline;}a:hover {color: #0e6471; -webkit-transition:color 200ms; -moz-transition:color 200ms; -o-transition:color 200ms;transition:color 200ms;}p{line-height: 1.5em;}blockquote{background-color: #e4f0f1; padding: 25px; line-height: 1.5em; margin: 15px 0;}blockquote span{font-weight: 600; padding-right: 5px;}ul.getting-started{padding: 25px 75px 25px 0; width: 70%; float: left; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}ul.getting-started li{padding: 25px 0;}ul.getting-started li h3 {padding-bottom: 10px; font-size: 25px; font-weight: 300;}.sprite{background:url(http://sailsjs.org/images/newapp.sprite.png) no-repeat; position: absolute; left: 0; top:0;}.getting-started .sprite{margin-left:10px;padding-left:60px;height:42px;width:0; float: left;}.getting-started .one{background-position:0 0}.getting-started .two{background-position:0 -42px}.getting-started .three{background-position:0 -83px}div.step {position: relative; padding-left: 70px; opacity: 0.9;}div.step:hover{ opacity: 1;}div.links {float: left; width: 30%; max-width: 325px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; background-color: #f3f5f7; border: 1px solid #ebebeb; padding: 25px 45px 35px;}div.links h3 {color: #727272; text-align: center; font-size: 28px; font-weight: 300;}div.links h4 {color: #727272; font-size: 17px; font-weight: 600; padding: 15px 0 10px;}div.links .link-list a {text-decoration: none; font-weight: 400;}div.links .link-list a li {padding: 0px 0px 5px 10px;}div.default-page{min-width: 1200px;}.pocket{display:none;}
-</style>
-<script type="text/javascript">
-setTimeout(function sunrise () {
-  document.getElementsByClassName('header')[0].style.backgroundColor = '#118798';
-}, 0);
-</script>
+
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -37,60 +29,59 @@ setTimeout(function sunrise () {
       <strong>Atención!</strong> Estimado visitante, es necesario que llenes todos los campos para conocernos, ¡Muchas gracias!
     No te preocupes <strong>Esculab Puno</strong> mantendrá seguro tus datos
   </div>
-  <form method="post" id="register-form" name="register" enctype="multipart/form-data" action="">
+  <form method="post" id="register-form" name="register">
   	<div class="form-group row">
-      <label for="inputDni" class="col-sm-2 col-form-label">DNI:</label>
-      <div class="col-sm-10">
-        <input type="dni" class="form-control" id="dni" placeholder="DNI" maxlength="8" required>
+      <label for="inputDni">DNI:</label>
+      <div>
+        <input type="number" name="dni" class="form-control" id="dni" placeholder="DNI" required>
         <div id="Info"></div>
       </div>
     </div>
 
     <div class="form-group row">
-      <label for="inputNameLastname" class="col-sm-2 col-form-label">Nombres y Apellidos:</label>
-      <div class="col-sm-10">
+      <label for="inputNameLastname">Nombres y Apellidos:</label>
+      <div>
         <input name="name_lastname" class="form-control" id="name_lastname" placeholder="Nombres y apellidos" required>
       </div>
     </div>
     <div class="form-group row">
-      <label for="inputAge" class="col-sm-2 col-form-label">Edad:</label>
-      <div class="col-sm-10">
-        <input name="age" class="form-control" id="age" placeholder="Edad" required>
+      <label for="inputAge">Edad:</label>
+      <div>
+        <input type="number" name="age" class="form-control" id="age" placeholder="Edad" required>
       </div>
     </div>
     <div class="form-group row">
-      <label for="inputCellphone" class="col-sm-2 col-form-label">Número de celular:</label>
-      <div class="col-sm-10">
+      <label type="number" for="inputCellphone">Número de celular:</label>
+      <div>
         <input name="cellphone" class="form-control" id="cellphone" placeholder="Numero de Celular" required>
       </div>
     </div>
     <div class="form-group row">
-      <label for="inputInstitution" class="col-sm-2 col-form-label">Institución:</label>
-      <div class="col-sm-10">
+      <label for="inputInstitution">Institución:</label>
+      <div>
         <input name="institution" class="form-control" id="institution" placeholder="Institucion" required>
       </div>
     </div>
     <div class="form-group row">
-      <label for="inputEmail" class="col-sm-2 col-form-label">Correo Electrónico:</label>
-      <div class="col-sm-10">
-        <input name="email" class="form-control" id="email" placeholder="Email" required>
+      <label for="inputEmail">Correo Electrónico:</label>
+      <div>
+        <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
       </div>
     </div>
     <div class="form-group row">
-      <label for="inputCheckin" class="col-sm-2 col-form-label">Hora de Ingreso:</label>
-      <div class="col-sm-10">
-        <input name="check_in" class="form-control" id="check_in" placeholder="<?php echo date("H:i:s"); ?>">
+      <label for="inputCheckin">Hora de Ingreso:</label>
+      <div>
+        <input type="time" name="check_in" class="form-control" id="check_in">
       </div>
     </div>
     <div class="form-group row">
-      <label for="inputReason" class="col-sm-2 col-form-label">Motivo de Visita:</label>
-      <div class="col-sm-10">
+      <label for="inputReason">Motivo de Visita:</label>
+      <div>
         <input name="reason" class="form-control" id="reason" placeholder="Motivo de visita">
       </div>
     </div>
     <div class="form-group row">
-      <label class="col-sm-2"></label>
-      <div class="col-sm-10">
+      <div>
         <div class="form-check">
           <label class="form-check-label">
             <input class="form-check-input" type="checkbox"> Acepto las normas de convivencia
@@ -100,8 +91,7 @@ setTimeout(function sunrise () {
     </div>
     <div class="form-group row">
       <div class="offset-sm-2 col-sm-10 text-center">
-        <!--<input type="submit" value="enviar" class="btn btn-primary btn-lg">-->
-        <buttom id="register" type="buttom" class="btn btn-primary btn-lg">Registrame</buttom>
+        <input type="submit" value="Guardar" class="btn btn-primary btn-lg">
       </div>
     </div>
   </form>
