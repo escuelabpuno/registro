@@ -10,3 +10,6 @@
 
 ## Run server
 - ``` $ sails lift ```
+
+## Open the application
+- http://localhost:8080
