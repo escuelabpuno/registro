@@ -1,0 +1,18 @@
+version: '2'
+services:
+  app:
+    build: .
+    image: server-app
+    container_name: registration-app
+    # network_mode: bridge
+    volumes:
+      - $PWD/:/app
+    links:
+      - db:db
+    working_dir: /escuelab/app
+
+  db:
+    image: mongo
+    container_name: registration-mongo
+    volumes:
+      - $PWD/datadir:/data/db
