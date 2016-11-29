@@ -1,2 +1,5 @@
 /datadir
 /node_modules
+
+.config
+.npm
