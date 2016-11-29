@@ -25,9 +25,6 @@ $(document).ready(function(){
 		var hora_ingreso = $("#hora_ingreso").val();
 		var motivo = $("#motivo").val();
 
-
-		debugger
-
 		var dataString = {'dni' : dni,
 						 'nom_ap' : nom_ap,
 						 'edad' : edad,
