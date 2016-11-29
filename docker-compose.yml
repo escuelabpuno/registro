@@ -6,7 +6,7 @@ services:
     container_name: registration-app
     # network_mode: bridge
     volumes:
-      - $PWD/app:/escuelab/app
+      - $PWD:/escuelab
     links:
       - db:db
     working_dir: /escuelab/app
