@@ -1,91 +1,66 @@
-<!-- Default home page -->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600' rel='stylesheet' type='text/css'>
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Brand</a>
-    </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Inicio <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Registrate</a></li>
-        <li><a href="#">Registra tu asistencia</a></li>
-      </ul>
+<div class="message">
+  <div class="container">
+    <div class="message__content">
+      <div class="message__content___icon">
+        <i class="fa fa-check" aria-hidden="true"></i>
+      </div>
+      <div class="message__content___description">
+        <strong>Joseph Ramos </strong> fue registrado exitosamente.
+      </div>
     </div>
   </div>
-</nav>
-<div class="container-fluid">
+</div>
 
-	<div class="container" id="register_form">
-  <div id="ok"></div>
-  <div class="alert alert-info">
-      <strong>Atención!</strong> Estimado visitante, es necesario que llenes todos los campos para conocernos, ¡Muchas gracias!
-    No te preocupes <strong>Esculab Puno</strong> mantendrá seguro tus datos
-  </div>
-  <form method="post" id="register-form" name="register">
-  	<div class="form-group row">
-      <label for="inputPid">DNI:</label>
-      <div>
+<div class="container">
+  <header>
+    <img class="logo" src="https://scontent.fsst1-1.fna.fbcdn.net/v/t1.0-9/429356_368634383169699_12021631_n.jpg?oh=b5723289cd67ed53e21f967fc44f8334&oe=58BE537D" />
+    <h1>Registro de Asistencia</h1>
+  </header>
+
+	<section>
+    <form id="register-form" name="register">
+
+    	<div class="form-group">
+        <label for="pid">DNI:</label>
         <input type="number" name="pid" class="form-control" id="pid" placeholder="DNI" required>
-        <div id="Info"></div>
       </div>
-    </div>
 
-    <div class="form-group row">
-      <label for="inputNameLastname">Nombres y Apellidos:</label>
-      <div>
-        <input name="name_lastname" class="form-control" id="name_lastname" placeholder="Nombres y apellidos" required>
+      <div class="form-group">
+        <label for="fullname">Nombres y Apellidos:</label>
+        <input name="fullname" class="form-control" id="fullname" placeholder="Nombres y apellidos" required>
       </div>
-    </div>
-    <div class="form-group row">
-      <label for="inputAge">Edad:</label>
-      <div>
+
+      <div class="form-group">
+        <label for="age">Edad:</label>
         <input type="number" name="age" class="form-control" id="age" placeholder="Edad" required>
       </div>
-    </div>
-    <div class="form-group row">
-      <label type="number" for="inputCellphone">Número de celular:</label>
-      <div>
-        <input name="cellphone" class="form-control" id="cellphone" placeholder="Numero de Celular" required>
+
+      <div class="form-group">
+        <label type="number" for="cellphone">Número de celular:</label>
+        <input name="cellphone" class="form-control" id="cellphone" placeholder="Numero de celular" required>
       </div>
-    </div>
-    <div class="form-group row">
-      <label for="inputInstitution">Institución:</label>
-      <div>
-        <input name="institution" class="form-control" id="institution" placeholder="Institucion" required>
+
+      <div class="form-group">
+        <label for="institution">Institución:</label>
+        <input name="institution" class="form-control" id="institution" placeholder="Institución" required>
       </div>
-    </div>
-    <div class="form-group row">
-      <label for="inputEmail">Correo Electrónico:</label>
-      <div>
-        <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
+
+      <div class="form-group">
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" name="email" class="form-control" id="email" placeholder="E-mail" required>
       </div>
-    </div>
-    <!--<div class="form-group row">
-      <label for="inputCheckin">Hora de Ingreso:</label>
-      <div>
-        <input type="time" name="check_in" class="form-control" id="check_in">
+
+      <div class="form-group">
+        <label for="reason">Motivo de visita</label>
+        <input name="reason" class="form-control" id="reason" placeholder="Motivo de visita" value="Muestra itinerante AJAYU" disabled>
       </div>
-    </div>-->
-    <div class="form-group row">
-      <label for="inputReason">Nombre del evento</label>
-      <div>
-        <input name="reason" class="form-control" id="reason" placeholder="Motivo de visita">
+
+      <div class="form-group">
+          <input type="submit" value="Guardar" class="btn btn-primary btn-lg">
       </div>
-    </div>
-    <div class="form-group row">
-      <div class="offset-sm-2 col-sm-10 text-center">
-        <input type="submit" value="Guardar" class="btn btn-primary btn-lg">
-      </div>
-    </div>
-  </form>
-</div>
-</div>
+
+    </form>
+
+  </section>
+
 </div>
