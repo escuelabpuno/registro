@@ -89,3 +89,75 @@ input + .error {
   margin-left: 2rem;
   font-size: 0.9em;
 }
+
+/* ----- Modal styles ----- */
+.modal {
+  display: none;
+}
+
+.modal__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(72, 100, 124, 0.8);;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__box {
+  background-color: white;
+  box-shadow: 0 0 4px #666;
+  min-width: 360px;
+  text-align: center;
+  padding: 5rem 8rem;
+  box-sizing: border-box;
+}
+
+.modal__box___icon {
+  font-size: 3em;
+  border: 2px solid;
+  display: inline-block;
+  border-radius: 50px;
+  width: 2em;
+  height: 2em;
+  color: #0ead9a;
+}
+
+.modal__box___icon i {
+  margin-top: 0.5em;
+}
+
+.modal__box___title {
+  font-weight: 600;
+  font-size: 1.7em;
+  margin-bottom: 0.5em;
+
+  display: none;
+}
+
+.modal__box___description {
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+/* ----- Button styles ----- */
+
+.button__green {
+  background-color: #0ead9a;
+  border-width: 0;
+  color: white;
+  padding: 1rem;
+  width: 250px;
+  font-weight: 600;
+  border-radius: 2em;
+}
+
+.button__green:focus, .button__green:hover  {
+  outline-width: 0;
+  opacity: 0.8;
+}
