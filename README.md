@@ -5,7 +5,6 @@
 - ``` $ make run ```
 
 ## Install dependencies
-- ``` $ cd app ```
 - ``` $ nmp install ```
 
 ## Run server
